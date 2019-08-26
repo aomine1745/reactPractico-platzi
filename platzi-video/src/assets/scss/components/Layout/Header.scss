@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+
+  &__img {
+    width: 200px;
+    margin-left: 30px;
+  }
+  
+  &__menu {
+    margin-right: 30px;
+    & ul {
+      display: none;
+      list-style: none;
+      margin-left: -14px;
+      margin-top: 0;
+      padding: 0;
+      position: absolute;
+      width: 100px;
+      text-align: right;
+    }
+    
+    &:hover ul,
+    ul:hover {
+      display: block;
+    }
+    
+    & li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+    &--profile {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      & img {
+        width: 40px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+

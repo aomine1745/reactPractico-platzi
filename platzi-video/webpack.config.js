@@ -33,6 +33,17 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(jpg|png|webp|svg|gif|mp4|webm|woff|eot|ttf)$/i,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            name: '[hash].[ext]',
+            outputParh: 'assets'
+          }
+        }
       }
     ]
   },

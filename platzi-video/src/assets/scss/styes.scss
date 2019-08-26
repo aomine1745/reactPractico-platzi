@@ -1,7 +1,9 @@
-$red: rgb(241, 80, 80);
+// Lib
+@import './lib/Vars';
 
-body {
-  margin: 0;
-  background-color: $red;
-  font-family: sans-serif;
-}
+// General
+@import './global/General';
+@import './global/Class';
+
+// Utils
+@import './Utils/Media';

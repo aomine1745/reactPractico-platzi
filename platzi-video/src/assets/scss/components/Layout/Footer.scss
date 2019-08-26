@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  & a {
+    padding-left: 30px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

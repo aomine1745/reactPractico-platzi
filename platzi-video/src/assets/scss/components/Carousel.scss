@@ -1,0 +1,23 @@
+.carousel {
+  overflow-x: auto;
+  padding-left: 30px;
+  &__container {
+    white-space: nowrap;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-bottom: 10px;
+    transition: 450ms transform;
+
+    &:hover .carousel-item {
+      opacity: .3;
+    }
+    
+    &:hover .carousel-item:hover {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+  }
+}
+
+
+
