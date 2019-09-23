@@ -1,53 +1,58 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
+// Header
 
-  &__img {
-    width: 200px;
-    margin-left: 30px;
-  }
-  
-  &__menu {
-    margin-right: 30px;
-    & ul {
-      display: none;
-      list-style: none;
-      margin-left: -14px;
-      margin-top: 0;
-      padding: 0;
-      position: absolute;
-      width: 100px;
-      text-align: right;
-    }
-    
-    &:hover ul,
-    ul:hover {
-      display: block;
-    }
-    
-    & li {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    
-    &--profile {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      & img {
-        width: 40px;
-        margin-right: 8px;
-      }
-    }
-  }
+.Header {
+	&__wrapper {
+		@extend %container-fluid;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+	}
 }
 
+// Branch
+
+.Branch {
+	&__logo {
+		width: 200px;
+		@include desktop(400px) {
+			width: 140px;
+		}
+	}
+}
+
+// User 
+
+.User {
+	position: relative;
+	width: 100px;
+	&__profile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&-icon {
+			width: 50px;
+			@include desktop(400px) {
+				width: 40px;
+				margin-left: 12px;
+			}
+		}
+	}
+	&:hover &__actions {
+		display: block;
+	}
+	&__actions {
+		display: none;
+		position: absolute;
+		text-align: right;
+		&-item {
+			margin-top: 10px;
+		}
+		&-link:hover {
+			text-decoration: underline;
+		}
+	}
+	&__profile:hover &__actions {
+		display: block;
+	}
+}

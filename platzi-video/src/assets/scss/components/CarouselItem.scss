@@ -1,62 +1,44 @@
-.carousel-item {
+.Carousel__item {
   position: relative;
   display: inline-block;
+  width: 300px;
+  height: 450px;
+  margin-right: 12px;
+  border-radius: 40px;
   overflow: hidden;
-  border-radius: 20px;
-  width: 200px;
-  height: 250px;
-  margin-right: 10px;
-  font-size: 20px;
-  transition: 450ms all;
-  transform-origin: center left;
   cursor: pointer;
-
-  &:hover ~ & {
-    transform: translate3d(100px, 0, 0);
+  transition: .45s;
+  transform-origin: center left;
+  @include desktop($bp-sm) {
+    width: 250px;
+    height: 350px;
+    margin-right: 8px;
   }
-  
-  &__img {
+  @include desktop($bp-xs-3) {
     width: 200px;
     height: 250px;
-    object-fit: cover;
+    border-radius: 20px;
   }
-  
-  &__details {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding: 10px;
-    background: linear-gradient(to top, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0) 100%);
-    font-size: 10px;
-    opacity: 0;
-    transition: 450ms opacity;
-
-    &--img {
-      width: 20px;
-      &:nth-child(2) {
-        margin-left: 4px;
-      }
-    }
-
-    &--title {
-      margin: 5px 0 0 0;
-    }
-    
-    &--subtitle {
-      font-size: 8px;
-      margin-top: 3px;
-      margin-bottom: 3px;
+  @extend %tap-highlight;
+  &:hover ~ & {
+    transform: translateX(100px);
+    @include range($bp-xs-3, $bp-sm) {
+      transform: translateX(70px);
     }
   }
-  
-  &:hover &__details {
-    opacity: 1;
+  &-img {
+    @extend %img-full;
+  }
+  &:first-child {
+    margin-left: 30px;
+    @include desktop($bp-xs-3) {
+      margin-left: 15px;
+    }
+  }
+  &:last-child {
+    margin-right: 110px;
+    @include range($bp-xs-3, $bp-sm) {
+      margin-right: 90px;
+    }
   }
 }
-

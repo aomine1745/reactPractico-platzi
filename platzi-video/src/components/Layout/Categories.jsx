@@ -1,12 +1,10 @@
-import React from 'react'
-
-import '../../assets/scss/components/Layout/Categories.scss'
+import React from 'react';
 
 const Categories = ({ children, title }) => (
-  <React.Fragment>
-    <h3 className="categories__title">{ title }</h3>
+  <>
+    <h2 className='main__title'>{ title }</h2>
     { children }
-  </React.Fragment>
-)
+  </>
+);
 
-export default Categories
+export default Categories;

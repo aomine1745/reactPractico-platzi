@@ -1,13 +1,13 @@
-import React from 'react'
-
-import '../../assets/scss/components/Layout/Footer.scss'
+import React from 'react';
 
 const Footer = () => (
-  <footer className="footer">
-    <a href="/">Terminos de uso</a>
-    <a href="/">Declaración de privacidad</a>
-    <a href="/">Centro de ayuda</a>
+  <footer className='Footer'>
+    <ul className='Footer__content'>
+      <li className='Footer__item'><a href='/' className='Footer__link'>Términos de uso</a></li>
+      <li className='Footer__item'><a href='/' className='Footer__link'>Declaración de privacidad</a></li>
+      <li className='Footer__item'><a href='/' className='Footer__link'>Centro de ayuda</a></li>
+    </ul>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

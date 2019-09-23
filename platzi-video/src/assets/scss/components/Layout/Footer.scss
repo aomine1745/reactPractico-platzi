@@ -1,15 +1,26 @@
-.footer {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  & a {
-    padding-left: 30px;
-    color: #fff;
-    font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+// Footer
+
+.Footer {
+	margin-top: 24px;
+	@include desktop($bp-sm-1) {
+		margin-bottom: 24px;
+	}
+	&__content {
+		height: 100px;
+		display: flex;
+		align-items: center;
+		@include desktop($bp-sm-1) {
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+	&__link {
+		font-style: 14px;
+		@include mobile($bp-sm-1) {
+			padding-left: 30px;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

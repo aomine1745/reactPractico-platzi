@@ -1,24 +1,27 @@
-import React from 'react'
+import React from 'react';
 
-import '../../assets/scss/components/Layout/Header.scss'
-
-import logo from '../../assets/img/logo-platzi-video-BW2.png'
-import userIcon from '../../assets/img/user-icon.png'
+import logo from '../../assets/img/logo-platzi-video-BW2.png';
+import userIcon from '../../assets/img/user-icon.png';
 
 const Header = () => (
-    <header className="header">
-    <img className="header__img" src={ logo } alt="Platzi Video" />
-    <div className="header__menu">
-      <div className="header__menu--profile">
-        <img src={ userIcon } alt="User" />
-        <p>Perfil</p>
+  <header className='Header'>
+    <div className='Header__wrapper'>
+      <div className='Branch'>
+        <img className='Branch__logo' src={logo} alt='Platzi Video' />
       </div>
-      <ul>
-        <li><a href="/">Cuenta</a></li>
-        <li><a href="/">Cerrar Sesión</a></li>
-      </ul>
+
+      <div className='User'>
+        <div className='User__profile'>
+          <img src={userIcon} alt='User' className='User__profile-icon' />
+          <p>Perfil</p>
+        </div>
+        <ul className='User__actions'>
+          <li className='User__actions-item'><a href='/' className='User__actions-link'>Cuenta</a></li>
+          <li className='User__actions-item'><a href='/' className='User__actions-link'>Cerrar Sesión</a></li>
+        </ul>
+      </div>
     </div>
   </header>
-)
+);
 
-export default Header
+export default Header;
